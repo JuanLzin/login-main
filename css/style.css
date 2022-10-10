@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+    --branco: #fff;
+    --brancoclaro: #f9f9f9;
+    --cinzaclaro: #ececec;
+    --cinza: #c4c4c4;
+    --cinzamedio: #a7a7a7;
+    --cinzaescuro: #343434;
+    --preto: #000;
+    --azul: #1b77f3;
+    --azulclaro: #3285f1;
+    --amarelo: #f0a818;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--amarelo);
+    /* background-image: url('../img/bg-sonic.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1; */
+}
+
+.title-login {
+    color: var(--branco);
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-login {
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: var(--azul);
+    border-radius: 6px;
+}
+
+.input-box {
+    position: relative;
+    width: 280px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinzaclaro);
+    background: var(--azul);
+    outline: none;
+    border-radius: 6px;
+    color: var(--branco);
+    font-size: 1em;
+}
+
+.input-box span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: var(--cinzaclaro);
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.input-box input:valid ~ span,
+.input-box input:focus ~ span{
+    color: var(--amarelo);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    background-color: var(--azul);
+
+}
+
+.input-box input:valid,
+.input-box input:focus {
+    border: 1px solid var(--amarelo);
+}
+
+.button-login button{
+    padding: 10px 22px 10px 22px;
+    font-size: .9em;
+    outline: none;
+    font-weight: bold;
+    color: var(--azul);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 18px;
+    margin-top: 12px;
+    transition: 0.4s;
+}
+
+.button-login button:hover {
+    color: var(--branco);
+    background-color: var(--amarelo);
+    box-shadow: 1px 2px var(--branco);
+}
+
+.button-login a {
+    text-decoration: none;
+    color: var(--branco);
+    transition: .2s;
+}
+
+.button-login a:hover {
+    color: var(--amarelo);
+}
+
+.sign-up {
+    display: flex;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.sign-up a {
+    color: var(--amarelo);
+    text-decoration: none;
+}
+
+.sign-up p {
+    color: var(--branco);
+}
